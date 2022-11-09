@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="frutas">
+        <item>Naranja</item>
+        <item>Maiz</item>
+        <item>Chili</item>
+        <item>Berenjena</item>
+        <item>Manzana</item>
+        <item>Platano</item>
+        <item>Piña</item>
+        <item>Pepino</item>
+        <item>Kiwi</item>
+        <item>Pera</item>
+        <item>Mango</item>
+        <item>Sandía</item>
+        <item>Lima</item>
+        <item>Fresa</item>
+        <item>Nabo</item>
+        <item>Pimiento</item>
+        <item>Limon</item>
+        <item>Cereza</item>
+        <item>Tomate</item>
+        <item>Calabaza</item>
+        <item>Patata</item>
+        <item>Calabacín</item>
+        <item>Granada</item>
+        <item>Zanahoria</item>
+        <item>Uva</item>
+        <item>Cebolla</item>
+        <item>Brocoli</item>
+        <item>Mandarina</item>
+        <item>Ciruela</item>
+        <item>Ajo</item>
+    </string-array>
+</resources>

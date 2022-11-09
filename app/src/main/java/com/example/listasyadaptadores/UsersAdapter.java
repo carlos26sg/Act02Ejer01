@@ -8,10 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.android.act02ejer01.R;
+import com.example.listasyadaptadores.MainActivity;
 
 import java.util.ArrayList;
 
@@ -54,13 +56,15 @@ public class UsersAdapter extends ArrayAdapter<User> {
         Button button_jmh = (Button)  convertView.findViewById(R.id.buttonjmh);
         // Defino una varieble para poder saber el contexto
         View finalConvertView_jmh = convertView;
+        Spinner spinner = (Spinner) convertView.findViewById(R.id.spinnerjmh);
+
         button_jmh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast notificacion=Toast.makeText(finalConvertView_jmh.getContext(),"hola",Toast.LENGTH_LONG);
+                Toast notificacion=Toast.makeText(finalConvertView_jmh.getContext(), "hola",Toast.LENGTH_LONG);
                 notificacion.show();
-
             }
+
         });
         // Devolvemos la vista para que se pinte (render) por la pantalla
         return convertView;

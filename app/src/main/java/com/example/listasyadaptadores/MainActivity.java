@@ -2,8 +2,13 @@ package com.example.listasyadaptadores;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -18,10 +23,39 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         LlamadaAdaptadorSimpleSpinner();
-        //LLamadaAdaptadorSimpleListViewConstructor1();
-        //LLamadaAdaptadorSimpleListViewConstructor2();
-        LlamadaAdaptadorPropioListView();
+        //onClick del boton Propio
+        Button buttonPropio = (Button) findViewById(R.id.btnPropio);
+        buttonPropio.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                LlamadaAdaptadorPropioListView();
+            }
+        });
+        //onClick del boton Simple1
+        Button btnSimple1 = (Button) findViewById(R.id.btnSimple1);
+        btnSimple1.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                LLamadaAdaptadorSimpleListViewConstructor1();
+            }
+        });
+        //onClick del boton Simple2
+        Button btnSimple2 = (Button) findViewById(R.id.btnSimple2);
+        btnSimple2.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                LLamadaAdaptadorSimpleListViewConstructor2();
+            }
+        });
+
+        //onClick del boton Frutas
+        Button btnFrutas = (Button) findViewById(R.id.btnFrutas);
+        btnFrutas.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ListaFrutas.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     private void LLamadaAdaptadorSimpleListViewConstructor1() {
