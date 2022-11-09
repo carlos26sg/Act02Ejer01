@@ -13,6 +13,7 @@ import com.example.android.act02ejer01.R;
 
 public class ListaFrutas extends AppCompatActivity {
 
+    //Creamos un array de 30 registros para introducir todas las frutas
     Fruta[] frutas = new Fruta[30];
 
     @Override
@@ -32,6 +33,7 @@ public class ListaFrutas extends AppCompatActivity {
         listaFrutas.setAdapter(adaptador);
     }
 
+    //Para que el codigo quede mas limpio, creamos todas las frutas en una función
     public void cargaFrutas(Bitmap bitmapFrutas){
         frutas[0] = new Fruta(0, "Naranja", bitmapFrutas, 0,0);
         frutas[1] = new Fruta(0, "Maiz", bitmapFrutas, 1,0);
@@ -65,6 +67,7 @@ public class ListaFrutas extends AppCompatActivity {
         frutas[29] = new Fruta(0, "Ajo", bitmapFrutas, 5,4);
     }
 
+    //Función para que la flecha de retorno cierre la activity actual y volvamos a la principal
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){

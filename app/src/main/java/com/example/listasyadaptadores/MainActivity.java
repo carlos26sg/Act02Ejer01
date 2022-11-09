@@ -3,8 +3,6 @@ package com.example.listasyadaptadores;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -46,11 +44,11 @@ public class MainActivity extends AppCompatActivity {
                 LLamadaAdaptadorSimpleListViewConstructor2();
             }
         });
-
         //onClick del boton Frutas
         Button btnFrutas = (Button) findViewById(R.id.btnFrutas);
         btnFrutas.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                //Llamamos a la otra actividad y la abrimos
                 Intent intent = new Intent(MainActivity.this, ListaFrutas.class);
                 startActivity(intent);
             }
@@ -58,6 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Función del botón Simple 1
     private void LLamadaAdaptadorSimpleListViewConstructor1() {
         // Este es el array en donde están los datos a visualizar
         String[] jmh_opciones = {"hola","adios","Viernes"};
@@ -69,6 +68,8 @@ public class MainActivity extends AppCompatActivity {
         //Inflamos los valores del ListView usando el adaptador
         jmh_origen.setAdapter(jmh_adapter1);
     }
+
+    //Función del botón Simple 2
     private void LLamadaAdaptadorSimpleListViewConstructor2() {
         // Este es el array en donde están los datos a visualizar
         String[] jmh_opciones = {"hola","adios"};
@@ -81,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
         jmh_origen.setAdapter(adapter_jmh);
     }
 
+    //Función del Spinner
     private void LlamadaAdaptadorSimpleSpinner() {
         // Este es el array en donde están los datos a visualizar
         String[] jmh_opciones = {"hola","adios"};
@@ -92,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
         jmh_origen.setAdapter(jmh_adapter1);
     }
 
+    //Función del botón Propio
     private void LlamadaAdaptadorPropioListView() {
         // Creamos los datos
         ArrayList<User> arrayOfUsers_jmh = new ArrayList<User>();

@@ -10,11 +10,13 @@ public class Fruta {
     Bitmap imagen;
     long id;
 
+    //Constructor
     public Fruta(long id, String nombre, Bitmap imagen, int x, int y){
 
         this.id = id;
         this.nombre = nombre;
         this.cantidad = 1;
+        //Partición del Bitmap en los trozos correspondientes
         this.imagen = Bitmap.createBitmap(imagen,
                 x*imagen.getWidth()/6,
                 y*imagen.getHeight()/5,
@@ -23,6 +25,7 @@ public class Fruta {
         imagen = Bitmap.createScaledBitmap(imagen, 128,128, false);
     }
 
+    //Getters y Setters necesarios
     public String getNombre() {
         return nombre;
     }

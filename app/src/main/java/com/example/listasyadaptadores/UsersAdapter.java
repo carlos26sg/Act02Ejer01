@@ -6,6 +6,7 @@ import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -56,7 +57,6 @@ public class UsersAdapter extends ArrayAdapter<User> {
         Button button_jmh = (Button)  convertView.findViewById(R.id.buttonjmh);
         // Defino una varieble para poder saber el contexto
         View finalConvertView_jmh = convertView;
-        Spinner spinner = (Spinner) convertView.findViewById(R.id.spinnerjmh);
 
         button_jmh.setOnClickListener(new View.OnClickListener() {
             @Override
